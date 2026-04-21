@@ -110,6 +110,7 @@
                 })
                 .then(data => {
                     // Update the UI with server information
+                    document.getElementById('version').textContent = data.version;
                     document.getElementById('environment').textContent = data.environment;
                     document.getElementById('server-time').textContent = new Date(data.serverTime).toLocaleString();
                     document.getElementById('hostname').textContent = data.hostname;
